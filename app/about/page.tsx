@@ -35,7 +35,7 @@ export default function Home() {
               connected.
               <br />
               <br />
-              Your tech is essential. I’m here to keep it working smoothly.
+              Your tech is essential. I&apos;m here to keep it working smoothly.
               <br />
             </p>
           </div>
