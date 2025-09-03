@@ -25,7 +25,7 @@ export default function Home() {
               issues efficiently and effectively.
               <br />
               <br />
-              Whether you're experiencing system crashes, slow performance,
+              Whether your&apos;e experiencing system crashes, slow performance,
               connectivity problems, or need help with upgrades and data
               recovery, I offer personalized solutions designed to get your
               devices back in top shape.
