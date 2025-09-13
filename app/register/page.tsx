@@ -8,7 +8,7 @@ export default function Home() {
       <NavBar />
 
       <main className="container mx-auto px-4 px-8 ">
-        <div className="p-5 grid grid-cols-1 lg:grid-cols-4 gap-4">
+        <div className="p-5 grid grid-cols-1 lg:grid-cols-3 gap-4">
           <div className="flex justify-center border-2 shadow-[5px_5px_5px_#121212] bg-[#EF5B1725] col-span-2 col-start-1 items-center text-black w-full lg:w-[624px] h-auto lg:h-[613px] rounded-lg">
               <Image
               src="/heart_repairs.png"

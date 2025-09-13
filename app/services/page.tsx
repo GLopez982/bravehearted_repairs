@@ -9,8 +9,8 @@ export default function Home() {
          <div className="w-full h-auto lg:h-[375px] bg-linear-to-r from-red-100 to-blue-500">
    
                  <Image
-                 className="w-auto h-auto max-w-[200px] lg:max-w-[250px] "
-                 src="/globe.svg"
+                 className="w-full h-full object-cover "
+                 src="/techLogoGL.png"
                  alt="Missing pic"
                  width={250}
                  height={250}
@@ -22,7 +22,7 @@ export default function Home() {
          
            <main className="container mx-auto px-4 py-10">
              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-             <div className="bg-black rounded-lg p-4 flex items-center justify-center min-h-[200px]">
+             <div className="shadow-[5px_5px_5px_#121212] bg-black rounded-lg p-4 flex items-center justify-center min-h-[200px]">
                <Image
                  src="/globe.svg"
                  alt="Missing pic"
@@ -34,7 +34,7 @@ export default function Home() {
    
              </div>
              
-             <div className="bg-black rounded-lg p-4 flex items-center justify-center min-h-[200px]">
+             <div className="shadow-[5px_5px_5px_#121212] bg-black rounded-lg p-4 flex items-center justify-center min-h-[200px]">
                 <Image
                  src="/globe.svg"
                  alt="Missing pic"
@@ -44,7 +44,7 @@ export default function Home() {
                  ></Image>
    
              </div>
-             <div className="bg-black rounded-lg p-4 flex items-center justify-center min-h-[200px]">
+             <div className="shadow-[5px_5px_5px_#121212] bg-black rounded-lg p-4 flex items-center justify-center min-h-[200px]">
                 <Image
                  src="/file.svg"
                  alt="Missing pic"
@@ -62,7 +62,7 @@ export default function Home() {
           <h2 className="text-center mx-auto "> Service Order Form </h2>
         </div>
 
-        <div className="shadow-lg hover:shadow-black border-2 border-[#EF5B1775] gap-4 w-full lg:w-[757px] h-auto lg:h-[562px] bg-[#EF5B1725] flex justify-center items-center mx-auto mb-10">
+        <div className="shadow-[5px_5px_5px_#121212] hover:shadow-black border-2 border-[#EF5B1775] gap-4 w-full lg:w-[757px] h-auto lg:h-[562px] bg-[#EF5B1725] flex justify-center items-center mx-auto mb-10">
           <form className="w-full text-black flex flex-col gap-4 p-4">
             
             <div className="flex flex-col md:flex-row gap-4 ">
@@ -98,9 +98,9 @@ export default function Home() {
             </label>
 
             <label  className="flex flex-col flex-1">
-              Your Message:
-              <textarea
-                className="border-2 border-black bg-white text-black w-full md:w-[731px] h-[193px]"
+                Service Message
+                <textarea
+                className="resize-none border-2 border-black bg-white text-black w-full md:w-[731px] h-[193px]"
                 name="Message"
                 required
               />
