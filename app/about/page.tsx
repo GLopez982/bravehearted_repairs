@@ -1,75 +1,75 @@
-"use client"
+// "use client"
 import Image from "next/image";
 import NavBar from "../components/navbar";
 import Footer from "../components/footer";
-import { useState } from "react";
+// import { useState } from "react";
 
 
-interface FormData{
-    firstName: string;
-    lastName: string;
-    email: string;
-    message: string;
-  }
+// interface FormData{
+//     firstName: string;
+//     lastName: string;
+//     email: string;
+//     message: string;
+//   }
 
 export default function Home() {
 
-  //form data variable to store form input in formData and function setFormData used for updating values
-  const [formData, setFormData] = useState<FormData>({
-    firstName: '',
-    lastName: '',
-    email: '',
-    message: ''
-  });
+//   //form data variable to store form input in formData and function setFormData used for updating values
+//   const [formData, setFormData] = useState<FormData>({
+//     firstName: '',
+//     lastName: '',
+//     email: '',
+//     message: ''
+//   });
 
 
-  //isSubmitting variable used to track if form is being submitted. startes in false value, setIsSubmitting used to update value.
-  const [isSubmitting, setIsSubmitting] =  useState<boolean>(false);
+//   //isSubmitting variable used to track if form is being submitted. startes in false value, setIsSubmitting used to update value.
+//   const [isSubmitting, setIsSubmitting] =  useState<boolean>(false);
 
-  //submitMessage used to hold error message or success message of form submittion, function setSubmitMessage used to update value.
-  const [submitMessage, setSubmitMessage] = useState<string>('');
+//   //submitMessage used to hold error message or success message of form submittion, function setSubmitMessage used to update value.
+//   const [submitMessage, setSubmitMessage] = useState<string>('');
 
-  //
-  const handleInputChange = (e: React.ChangeEvent <HTMLInputElement | HTMLTextAreaElement>) =>  {
-    const {name, value} = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
+//   //
+//   const handleInputChange = (e: React.ChangeEvent <HTMLInputElement | HTMLTextAreaElement>) =>  {
+//     const {name, value} = e.target;
+//     setFormData(prev => ({
+//       ...prev,
+//       [name]: value
+//     }));
+//   };
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) =>{
-    e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitMessage('');
+//   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) =>{
+//     e.preventDefault();
+//     setIsSubmitting(true);
+//     setSubmitMessage('');
   
-    try{
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData), 
-      });
+//     try{
+//       const response = await fetch('/api/contact', {
+//         method: 'POST',
+//         headers: {
+//           'Content-Type': 'application/json',
+//         },
+//         body: JSON.stringify(formData), 
+//       });
 
-      if(response.ok){
-        setSubmitMessage('Message sent successfully!')
-        setFormData({
-          firstName: '',
-          lastName: '',
-          email: '',
-          message: ''
-        });
-      }else{
-        setSubmitMessage("Message failed, please try again in a few seconds");
-      }
-    }catch(error: unknown){
-      console.log(error);
-      setSubmitMessage('Error Sending Message. Please try again');
-    }finally{
-      setIsSubmitting(false)
-    }  
-  };
+//       if(response.ok){
+//         setSubmitMessage('Message sent successfully!')
+//         setFormData({
+//           firstName: '',
+//           lastName: '',
+//           email: '',
+//           message: ''
+//         });
+//       }else{
+//         setSubmitMessage("Message failed, please try again in a few seconds");
+//       }
+//     }catch(error: unknown){
+//       console.log(error);
+//       setSubmitMessage('Error Sending Message. Please try again');
+//     }finally{
+//       setIsSubmitting(false)
+//     }  
+//   };
 
   return (
     <div className="bg-[#CBC9C6] font-sans min-h-screen overflow-x-hidden">
@@ -125,22 +125,17 @@ export default function Home() {
         </div>
 
         <div className="shadow-lg hover:shadow-black border-2 border-[#EF5B1775] gap-4 w-full lg:w-[757px] h-auto lg:h-[562px] bg-[#EF5B1725] flex justify-center items-center mx-auto mb-10">
-          <form onSubmit={handleSubmit} className="w-full text-black flex flex-col gap-4 p-4">
-            
-            {submitMessage && (
-              <div className={`p-3 rounded text-center ${submitMessage.includes('Successfully') ? 'bg-green-100 text-green-800 border border-green-300' : 'bg-red-100 text-red-800 border border-red-300'}`}> 
-               {submitMessage}
-              </div>
-            )}
-            <div className="flex flex-col md:flex-row gap-4 ">
+          <form  className="w-full text-black flex flex-col gap-4 p-4">
+           
+                      <div className="flex flex-col md:flex-row gap-4 ">
               <label className="flex flex-col flex-1">
                 First Name:
                 <input
                   className="border-2 border-black bg-white text-black w-full  md:w-[344.48px] h-[56px]"
                   type="text"
                   name="firstName"
-                  value={formData.firstName}
-                  onChange={handleInputChange}
+                  // value={formData.firstName}
+                  // onChange={handleInputChange}
                   required
                 />
               </label>
@@ -151,8 +146,8 @@ export default function Home() {
                   className="border-2 border-black bg-white text-black w-full md:w-[344.48px] h-[56px]"
                   type="text"
                   name="lastName"
-                  value={formData.lastName}
-                  onChange={handleInputChange}
+                  // value={formData.lastName}
+                  // onChange={handleInputChange}
                   required
                 />
               </label>
@@ -164,8 +159,8 @@ export default function Home() {
                 className="border-2 border-black bg-white text-black w-full md:w-[731px] h-[63px]"
                 type="text"
                 name="email"
-                value={formData.email}
-                onChange={handleInputChange}
+                // value={formData.email}
+                // onChange={handleInputChange}
                 required
               />
             </label>
@@ -175,17 +170,17 @@ export default function Home() {
               <textarea
                 className="resize-none border-2 border-black bg-white text-black w-full md:w-[731px] h-[193px]"
                 name="message"
-                value={formData.message}
-                onChange={handleInputChange}
+                // value={formData.message}
+                // onChange={handleInputChange}
                 required
               />
             </label >
             <div className="flex justify-center">
            <button 
             type="submit"
-            disabled={isSubmitting}
-            className="text-black border-2 border-black bg-white cursor-pointer px-6 py-2 hover:bg-[#E77014] transition-colors">
-            {isSubmitting ? 'Sending....' : 'Submit'}
+            // disabled={isSubmitting}
+            className="text-black border-2 border-black bg-white cursor-pointer px-6 py-2 hover:bg-[#E77014] transition-colors">Submit
+            {/* {isSubmitting ? 'Sending....' : 'Submit'} */}
             </button>
          </div>
           </form>
