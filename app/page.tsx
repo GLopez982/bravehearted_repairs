@@ -26,7 +26,7 @@ export default function Home() {
             <h2 className="flex justify-center text-black font-bold text-[30px] p-10 ">BraveHearted Repairs.....We bring life back to your technology!</h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           <div className="shadow-[5px_5px_5px_#121212] bg-[#00000075] border-2 border-[#E77014] rounded-lg p-4 min-h-[200px]">
             
             <Image
@@ -37,7 +37,7 @@ export default function Home() {
               height={250}
               priority
               ></Image>
-              <div className="p-4 text-center text-black text-[25px]">
+              <div className="p-4 text-center text-black text-[25px] ">
                 <figcaption className=" mt-5 mb-5">Bravehearted Repairs also offers custom PC Builds</figcaption> 
               </div>
               
