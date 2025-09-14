@@ -50,7 +50,7 @@ export default function Home() {
               className="w-full h-full object-cover"
               src="/laptop.png"
               alt="Missing pic"
-              width={650}
+              width={550}
               height={250}
               priority
               ></Image>
@@ -63,14 +63,14 @@ export default function Home() {
           <div className="shadow-[5px_5px_5px_#121212] bg-[#00000075] border-2 border-[#E77014] rounded-lg p-4 min-h-[200px]">
              <Image
               className="w-full h-full object-cover"
-              src="/file.svg"
+              src="/tablet-repair.jpg"
               alt="Missing pic"
               width={550}
               height={250}
               priority
               /> 
               <div className="p-4 text-center text-black text-[25px]">
-                <figcaption className="mt-5 mb-5">We have certified repair technicians on site for any laptop</figcaption> 
+                <figcaption className="mt-5 mb-5">We service all mobile and tablet devices</figcaption> 
               </div>
 
           </div>

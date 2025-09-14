@@ -108,7 +108,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="mt-5 flex w-full h-auto lg:w-[517px] lg:h-[663px] border-2 border-[#EF5B1750] shadow-lg shadow-[#EF5B1765] rounded-lg bg-black">
+          <div className="mt-5 flex w-full h-auto lg:w-[517px] lg:h-[663px] border-2 border-[#EF5B1750] shadow-lg shadow-[#000000] rounded-lg bg-black">
             <Image
               className=""
               src="/Me.jpg"
@@ -124,14 +124,14 @@ export default function Home() {
           <h2 className="text-center mx-auto text-[25px] mt-10 font-bold"> Contact me</h2>
         </div>
 
-        <div className="shadow-lg hover:shadow-black border-2 border-[#EF5B1775] gap-4 w-full lg:w-[757px] h-auto lg:h-[562px] bg-[#EF5B1725] flex justify-center items-center mx-auto mb-10">
+        <div className="shadow-lg shadow-black hover:shadow-white focus:shadow-white border-2 border-[#EF5B1775] gap-4 w-full lg:w-[757px] h-auto lg:h-[562px] bg-[#EF5B1725] flex justify-center items-center mx-auto mb-10">
           <form  className="w-full text-black flex flex-col gap-4 p-4">
            
                       <div className="flex flex-col md:flex-row gap-4 ">
               <label className="flex flex-col flex-1">
                 First Name:
                 <input
-                  className="border-2 border-black bg-white text-black w-full  md:w-[344.48px] h-[56px]"
+                  className="border-2 border-black bg-white text-black w-full  md:w-[344.48px] h-[40px]"
                   type="text"
                   name="firstName"
                   // value={formData.firstName}
@@ -143,7 +143,7 @@ export default function Home() {
               <label  className="flex flex-col flex-1">
                 Last Name:
                 <input
-                  className="border-2 border-black bg-white text-black w-full md:w-[344.48px] h-[56px]"
+                  className="border-2 border-black bg-white text-black w-full md:w-[344.48px] h-[40px]"
                   type="text"
                   name="lastName"
                   // value={formData.lastName}
@@ -156,7 +156,7 @@ export default function Home() {
             <label  className="flex flex-col flex-1">
               Email:
               <input
-                className="border-2 border-black bg-white text-black w-full md:w-[731px] h-[63px]"
+                className="border-2 border-black bg-white text-black w-full md:w-[731px] h-[50px]"
                 type="text"
                 name="email"
                 // value={formData.email}

@@ -34,7 +34,7 @@ export default function NavBar(){
                 </li>   
                 <li>        
                     <Link href="/register" className="hover:text-[#110211] text-shadow-lg hover:text-shadow-white text-white-700 hover:text-black-600 px-3 py-2 text-sm font-medium transition-colors">
-                        Sign Up</Link>
+                       Register</Link>
                 </li>   
 
             </ul>
