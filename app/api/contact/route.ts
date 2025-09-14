@@ -22,7 +22,7 @@ export async function POST(request: Request) {
             );
         }
 
-        const emailResponse: any = await resend.emails.send({
+        const emailResponse = await resend.emails.send({
 
             from: 'onboarding@resend.dev',
 
@@ -62,16 +62,27 @@ export async function POST(request: Request) {
 
         });
 
-
-        console.log('Email sent successfully:', emailResponse);
-        return NextResponse.json({
+        if(emailResponse.data){
+          console.log('Email sent successfully:', emailResponse);
+          return NextResponse.json({
             message: 'Email sent successfully',
-            emailId: emailResponse.id || null
-        });
-            
-        
+            emailId: emailResponse.data.id 
+          });
+        }else if(emailResponse.error){
+          console.error('Email sending failed: ', emailResponse.error);
+          return NextResponse.json({
+            error: 'Failed to send email',
+            details: emailResponse.error.message
+          }, {status: 400});         
+        }else{
+          console.error('Unexpected error detected', emailResponse);
+          return NextResponse.json({
+            error: 'Unexpected response from email service'
 
-    }catch(error){
+          }, {status: 500});
+        }
+        
+    }catch(error: unknown){
       if(error instanceof Error){
                 console.error('API route error:', error.message);
 
@@ -85,6 +96,7 @@ export async function POST(request: Request) {
         );
     }
 }
+
 
 export async function GET() {
   return NextResponse.json({ 
