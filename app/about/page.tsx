@@ -63,7 +63,8 @@ export default function Home() {
       }else{
         setSubmitMessage("Message failed, please try again in a few seconds");
       }
-    }catch(error){
+    }catch(error: any){
+      console.log(error.message);
       setSubmitMessage('Error Sending Message. Please try again');
     }finally{
       setIsSubmitting(false)
