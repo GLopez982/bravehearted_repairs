@@ -23,10 +23,10 @@ export default function Home() {
       
         <main className="container mx-auto px-4 py-10">
           <div className="grid grid-cols-1">
-            <h2 className="flex justify-center text-black font-bold text-[30px] p-10 ">BraveHearted Repairs.....We bring life back to your technology!</h2>
+            <h2 className="flex justify-center font-bold text-[30px] p-10 bg-linear-to-r from-[#EF5B17] to-[#000000] bg-clip-text text-transparent">BraveHearted Repairs.....We bring life back to your technology!</h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-30 lg:gap-4">
           <div className="shadow-[5px_5px_5px_#121212] bg-[#00000075] border-2 border-[#E77014] rounded-lg p-4 min-h-[200px]">
             
             <Image
@@ -82,7 +82,7 @@ export default function Home() {
 
        <div className="bg-transparent w-full py-10 px-4">
         <div className="flex items-center justify-center">
-          <div className="shadow-[5px_5px_5px_#121212] mt-25 text-black text-xl bg-white w-[624px] h-[76px] gap-4 flex items-center justify-center border-4 border-[#E77014] font-bold text-[25px]">Testimonials</div>
+          <div className="shadow-[5px_5px_5px_#121212] mt-25 text-black bg-white w-full h-auto lg:w-[624px] lg:h-[76px] gap-4 flex items-center justify-center border-4 border-[#E77014] font-bold text-[25px] rounded-[5px]">Testimonials</div>
         </div>
         </div>
 

@@ -17,7 +17,7 @@ export default function NavBar(){
                 /> 
                     
             </div>
-            <div className='flex flex-col justify-center text-[20px] lg:text-[30px] font-bold focus:text-[#110211] focus:text-shadow-white active:text-shadow-white hover:text-[#110211] hover:text-shadow-lg hover:text-shadow-white'>BraveHearted Repairs</div>
+            <div className='flex flex-col justify-center text-[20px] lg:text-[30px] font-bold focus:text-[#110211] focus:text-shadow-white active:text-shadow-white hover:text-[#110211] hover:text-shadow-lg hover:text-shadow-white '>BraveHearted Repairs</div>
             <div className='flex items-center'>
             <ul className='flex items-end'>
                 <li>

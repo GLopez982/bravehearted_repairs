@@ -157,7 +157,7 @@ export default function Home() {
             <div className="flex justify-center">
            <button 
             type="submit"
-            className="text-black border-2 border-black bg-white cursor-pointer px-6 py-2 hover:bg-[#E77014] transition-colors">Submit</button>
+            className="text-white border-2 border-black bg-white cursor-pointer px-6 py-2 hover:bg-[#E77014] transition-colors bg-linear-to-r from-[#EF5B17] to-[#000000]">Submit</button>
          </div>
           </form>
          

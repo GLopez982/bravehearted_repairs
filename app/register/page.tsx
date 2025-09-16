@@ -19,15 +19,33 @@ export default function Home() {
             />
           </div>
 
-          <div className="mt-5 flex w-auto h-auto lg:w-[417px] lg:h-[678px] border-2 border-[#EF5B1750] shadow-lg shadow-[#EF5B1765] rounded-lg bg-black">
-            <Image
-              className=""
-              src="/file.svg"
-              alt="Next.js logo"
-              width={517}
-              height={663}
-              priority
-            />
+
+          <div className="mt-5 flex w-auto h-auto lg:w-[417px] lg:h-[678px] border-2 border-[#EF5B1750] shadow-lg shadow-[#EF5B1765] rounded-lg bg-[#EF5B1725] ">
+            
+            <form className="flex flex-col items-center">
+              <h1 className="text-[20px] font-bold bg-linear-to-r from-[#EF5B17] to-[#000000] bg-clip-text text-transparent">Register Now!</h1>
+              <div className="p-10">
+              <label  className="flex flex-col flex-1 text-black gap-2">
+              Email:
+              <input
+                className="border-2 border-black text-black w-full md:w-[308px] md:h-[25px] bg-[#FFFFFF80]"
+                type="text"
+                name="email"
+                required
+              />
+            </label>
+             <label  className="flex flex-col flex-1 text-black gap-2">
+              Password:
+              <input
+                className="border-2 border-black text-black w-full md:w-[308px] md:h-[25px] bg-[#FFFFFF80]"
+                type="password"
+                name="password"
+                required
+              />
+            </label>
+            </div>
+            <button className="flex flex-col border-2 border-black bg-white text-white rounded-[5px] shadow-lg shadow-white mb-10 lg:mb-0 ml-12 lg:ml-0 bg-linear-to-r from-[#EF5B17] to-[#000000] w-full h-auto lg:w-[100px]">Register</button>
+            </form>
           </div>
         </div>
 

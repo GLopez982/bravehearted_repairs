@@ -177,9 +177,9 @@ export default function Home() {
             </label >
             <div className="flex justify-center">
            <button 
-            type="submit"
+            type="submit" 
             // disabled={isSubmitting}
-            className="text-black border-2 border-black bg-white cursor-pointer px-6 py-2 hover:bg-[#E77014] transition-colors">Submit
+            className="text-white border-2 border-black bg-white cursor-pointer px-6 py-2 hover:bg-[#E77014] transition-colors bg-linear-to-r from-[#EF5B17] to-[#000000]">Submit
             {/* {isSubmitting ? 'Sending....' : 'Submit'} */}
             </button>
          </div>
