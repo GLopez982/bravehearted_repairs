@@ -9,11 +9,11 @@ export default function NavBar(){
             <div className="mb-0 lg:mb-4 px-0 lg:px-20 flex lg:items-center justify-center lg:justify-start">
             
                 <Image
-                    className='lg:w-[100px] lg:h-[100px]'
+                    className='lg:w-[140px] lg:h-[140px]'
                     src="/circuit-heart.png"
                     alt="A heart that looks like a circuit board"
-                    width={120}
-                    height={40} 
+                    width={220}
+                    height={60} 
                 /> 
                     
             </div>
