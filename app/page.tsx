@@ -16,14 +16,14 @@ export default function Home() {
               width={250}
               height={250}
               priority
-              ></Image>
+              />
       </div>
     
 
       
         <main className="container mx-auto px-4 py-10">
           <div className="grid grid-cols-1">
-            <h2 className="flex justify-center font-bold text-[30px] p-10 bg-linear-to-r from-[#EF5B17] to-[#000000] bg-clip-text text-transparent">BraveHearted Repairs.....We bring life back to your technology!</h2>
+            <h2 className="flex justify-center font-bold text-[30px] p-10 bg-linear-to-r from-[#EF5B17] to-[#000000] bg-clip-text text-transparent">BraveHeart Repairs.....We bring life back to your technology!</h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-30 lg:gap-4">
@@ -36,9 +36,9 @@ export default function Home() {
               width={550}
               height={250}
               priority
-              ></Image>
+              />
               <div className="p-4 text-center text-black text-[25px] ">
-                <figcaption className=" mt-5 mb-5">Bravehearted Repairs also offers custom PC Builds</figcaption> 
+                <figcaption className=" mt-5 mb-5">Braveheart Repairs also offers custom PC Builds</figcaption> 
               </div>
               
           </div>
@@ -53,7 +53,7 @@ export default function Home() {
               width={550}
               height={250}
               priority
-              ></Image>
+              />
                <div className="p-4 text-center text-black text-[25px]">
                 <figcaption className="mt-5 mb-5">We have certified repair technicians on site for any laptop</figcaption> 
               </div>

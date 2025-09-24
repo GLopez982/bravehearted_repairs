@@ -15,7 +15,7 @@ export default function Home() {
                  width={250}
                  height={250}
                  priority
-                 ></Image>
+                 />
          </div>
        
    
@@ -27,10 +27,10 @@ export default function Home() {
                <Image
                  src="/desktop-services.png"
                  alt="Missing pic"
-                 width={550}
+                 width={450}
                  height={250}
                  priority
-                 ></Image>
+                 />
    
    
              </div>
@@ -38,23 +38,25 @@ export default function Home() {
              <div className="border-2 shadow-[5px_5px_5px_#121212] bg-[#E77014] rounded-lg p-4 flex flex-col items-center justify-center min-h-[200px]">
                 <h1 className="mb-16 text-shadow-lg text-shadow-[#000000] text-[25px]">Laptop Services</h1>
                 <Image
+                
                  src="/laptop-services.png"
                  alt="Missing pic"
                  width={450}
                  height={250}
                  priority
-                 ></Image>
+                 />
    
              </div>
              <div className="border-2 shadow-[5px_5px_5px_#121212] bg-[#E77014] rounded-lg p-4 flex flex-col items-center justify-center min-h-[200px]">
                 <h1 className="mb-16 text-shadow-lg text-shadow-[#000000] text-[25px]">Mobile/Tablet Services</h1>
                 <Image
+                className="lg:w-[340px]"
                  src="/mobile-services.png"
                  alt="Missing pic"
-                 width={420}
+                 width={450}
                  height={250}
                  priority
-                 ></Image>
+                 />
    
              </div>
              </div>

@@ -3,11 +3,11 @@ import Link from 'next/link'
 
 export default function Footer(){
     return(
-        <div className="border-2 bg-[#E77014] shadow-md border-black w-full h-auto lg:h-[165px] px-10 rounded-[8px]">
-            <footer className=' gap-8 bg-[#E77014] shadow-md border-green w-screen h-auto lg:h-[165px] px-10 flex-shrink-0 flex rounded-lg'>
+        <div className="border-2 bg-[#E77014]  shadow-md border-black w-full h-auto lg:h-[165px] lg:px-10 rounded-[8px]">
+            <footer className=' gap-8 shadow-md  w-screen h-auto lg:h-[165px] px-10 flex-shrink-0 flex rounded-lg'>
                <div className='flex-1 content-center'>
                   <Image 
-                        src="/word_logo.png"
+                        src="/circuit-heart.png"
                         alt="Missing Logo"
                         width={140}
                         height={100}
