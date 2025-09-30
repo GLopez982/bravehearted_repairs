@@ -166,7 +166,7 @@ export default function Home() {
         </div>  
            </div>
            <div className="p-10 w-full h-auto"></div>
-         <Footer></Footer>
+         <Footer/>
        </div>
   );
 }

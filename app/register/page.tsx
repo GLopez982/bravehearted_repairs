@@ -28,7 +28,7 @@ export default function Home() {
               <label  className="flex flex-col flex-1 text-black gap-2">
               First Name:
               <input
-                className="border-2 border-black text-black w-full lg:w-[125px] md:h-[25px] bg-[#FFFFFF80]"
+                className="border-2 border-black text-black w-full lg:w-[308px] md:h-[25px] bg-[#FFFFFF80]"
                 type="text"
                 name="firstName"
                 required
@@ -37,7 +37,7 @@ export default function Home() {
              <label  className="flex flex-col flex-1 text-black gap-2">
               Last Name:
               <input
-                className="border-2 border-black text-black w-full md:w-[125px] md:h-[25px] bg-[#FFFFFF80]"
+                className="border-2 border-black text-black w-full lg:w-[308px] md:h-[25px] bg-[#FFFFFF80]"
                 type="text"
                 name="lastName"
                 required
@@ -77,8 +77,8 @@ export default function Home() {
         </div>
 
        </main>
-      <div className="flex pt-90">
-      <Footer/></div>
+      
+      <Footer/>
     </div>
   );
 }
