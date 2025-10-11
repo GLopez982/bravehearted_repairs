@@ -14,8 +14,8 @@ interface FormData {
     password: string;
 }
 
-const supabaseURL = process.env.NEXT_SUPABASE_URL || 'https://kqwtcclvefodxqldijhh.supabase.co';
-const supabaseKey = process.env.NEXT_SUPABASE_ANON || 'sb_publishable_8p2sGu1KevPySaNpFr2JLA_13OhwK3h';
+const supabaseURL = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
+const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON || '';
 
 export default function Home() {
 
@@ -75,7 +75,6 @@ export default function Home() {
   }
 
 
-  
   return (
     <div className=" bg-[#CBC9C6] font-sans min-h-screen overflow-x-hidden">
       <NavBar />
@@ -93,7 +92,7 @@ export default function Home() {
           </div>
 
 
-          <div className="mt-5 flex w-auto h-auto lg:w-[417px] lg:h-[678px] border-2 border-[#EF5B1750] shadow-lg shadow-[#000000] hover:shadow-[#EF5B1765] rounded-lg bg-[#EF5B1725] ">
+          <div className="mt-5 flex w-auto h-auto lg:w-[417px] lg:h-[679px] border-2 border-[#EF5B1750] shadow-lg shadow-[#000000] hover:shadow-[#EF5B1765] rounded-lg bg-[#EF5B1725] ">
             
             <form onSubmit={handleSubmit} className="flex flex-col items-center">
               <h1 className="text-[20px] font-bold bg-linear-to-r from-[#EF5B17] to-[#000000] bg-clip-text text-transparent p-10">Register Now!</h1>
