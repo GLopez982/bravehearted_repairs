@@ -1,6 +1,5 @@
 'use client'
 import { ChangeEvent, FormEvent, useState } from "react";
-import 
 import { createClient, SupabaseClient } from "@supabase/supabase-js";
 import Image from "next/image";
 import NavBar from "../components/navbar";
