@@ -1,6 +1,7 @@
 'use client'
 import { ChangeEvent, FormEvent, useState } from "react";
-import { createClient } from "@supabase/supabase-js";
+import 
+import { createClient, SupabaseClient } from "@supabase/supabase-js";
 import Image from "next/image";
 import NavBar from "../components/navbar";
 import Footer from "../components/footer";
@@ -19,7 +20,7 @@ const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON || '';
 
 export default function Home() {
 
-  const supabase = createClient (
+  const supabase: SupabaseClient = createClient(
       supabaseURL,
       supabaseKey
   );
