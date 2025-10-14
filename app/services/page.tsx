@@ -1,8 +1,85 @@
+'use client'
 import NavBar from "../components/navbar";
 import Footer from "../components/footer";
 import Image from "next/image";
+import { createClient, SupabaseClient } from "@supabase/supabase-js";
+import { ChangeEvent, FormEvent, useState } from "react";
+import supabase from "../components/api/client"
+
+interface ServiceData {
+  first_name: string;
+  last_name: string;
+  email: string;
+  service: string;
+  message: string;
+}
+
+// const supabaseURL = process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://kqwtcclvefodxqldijhh.supabase.co';
+// const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON || 'sb_publishable_8p2sGu1KevPySaNpFr2JLA_13OhwK3h';
+
 
 export default function Home() {
+
+  // const supabase: SupabaseClient = createClient(supabaseURL, supabaseKey);
+
+ 
+  
+  const [serviceData, setServiceData] = useState<ServiceData>({
+    first_name: '',
+    last_name: '',
+    email: '',
+    service: '',
+    message: ''
+  });
+
+  async function storeServiceData(serviceData: ServiceData): Promise<boolean>{
+    const {data, error} = await supabase
+    .from('services')
+    .insert([serviceData])
+
+    if(error){
+      console.error("Error submitting the service form: ", error.message);
+      return false;
+    }
+
+    console.log('Data inserted successfully', data)
+    return true;
+  }
+
+  const handleInputChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement> ) => {
+    const {name, value} = e.target;
+    setServiceData(prev => ({
+      ...prev, 
+      [name]: value
+    }));
+  };
+
+ 
+
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    console.log('Form submitted: ', serviceData);
+
+    const success = await storeServiceData(serviceData);
+    
+    if(success){
+      alert("Successfully submitted service form");
+      setServiceData({
+        first_name: '',
+        last_name: '',
+        email: '',
+        service: '',
+        message: ''
+      })
+    }else{
+      alert('Failed to submit service form');
+    }
+  }  
+
+
+  
+
   return (
    <div className="bg-[#CBC9C6] font-sans min-h-screen overflow-x-hidden">
          <NavBar/>
@@ -68,15 +145,17 @@ export default function Home() {
         </div>
 
         <div className="shadow-[5px_5px_5px_#121212] hover:shadow-black border-2 border-[#EF5B1775] gap-4 w-full lg:w-[757px] h-auto lg:h-[562px] bg-[#EF5B1725] flex justify-center items-center mx-auto mb-10">
-          <form className="w-full text-black flex flex-col gap-4 p-4">
+          <form onSubmit={handleSubmit} className="w-full text-black flex flex-col gap-4 p-4">
             
             <div className="flex flex-col md:flex-row gap-4 ">
-              <label className="flex flex-col flex-1">
+              <label htmlFor="first_name" className="flex flex-col flex-1">
                 First Name:
                 <input
                   className="border-2 border-black bg-white text-black w-full  md:w-[344.48px] h-[56px]"
                   type="text"
-                  name="name"
+                  name="first_name"
+                  value={serviceData.first_name}
+                  onChange={handleInputChange}
                   required
                 />
               </label>
@@ -86,7 +165,9 @@ export default function Home() {
                 <input
                   className="border-2 border-black bg-white text-black w-full md:w-[344.48px] h-[56px]"
                   type="text"
-                  name="lName"
+                  name="last_name"
+                  value={serviceData.last_name}
+                  onChange={handleInputChange}
                   required
                 />
               </label>
@@ -98,6 +179,8 @@ export default function Home() {
                 className="border-2 border-black bg-white text-black w-full md:w-[731px] h-[63px]"
                 type="text"
                 name="email"
+                value={serviceData.email}
+                onChange={handleInputChange}
                 required
               />
             </label>
@@ -106,7 +189,9 @@ export default function Home() {
                 Service select
                 <select
                 className="resize-none border-2 border-black bg-white text-black w-full  md:w-[731px] h-[60px]"
-                name="Message"
+                name="service"
+                onChange={handleInputChange}
+                value={serviceData.service}
                 required
               >
                 <option value= "" disabled>Select a service option</option>
@@ -152,7 +237,9 @@ export default function Home() {
                 Service Message
                 <textarea
                 className="resize-none border-2 border-black bg-white text-black w-full md:w-[731px] h-[130px]"
-                name="Message"
+                name="message"
+                value={serviceData.message || ''}
+                onChange={handleInputChange}
                 required
               />
             </label >

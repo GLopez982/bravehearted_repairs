@@ -14,8 +14,8 @@ interface FormData {
     password: string;
 }
 
-const supabaseURL = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
-const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON || '';
+const supabaseURL = process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://kqwtcclvefodxqldijhh.supabase.co'
+const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON || 'sb_publishable_8p2sGu1KevPySaNpFr2JLA_13OhwK3h'
 
 export default function Home() {
 
@@ -24,6 +24,7 @@ export default function Home() {
       supabaseKey
   );
 
+  
   const [formData, setFormData] = useState<FormData>({
     first_name: '',
     last_name: '',
