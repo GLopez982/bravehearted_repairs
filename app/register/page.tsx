@@ -4,6 +4,7 @@ import { createClient, SupabaseClient } from "@supabase/supabase-js";
 import Image from "next/image";
 import NavBar from "../components/navbar";
 import Footer from "../components/footer";
+import supabase from "../components/api/client";
 
 
 interface FormData {
@@ -14,17 +15,9 @@ interface FormData {
     password: string;
 }
 
-const supabaseURL = process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://kqwtcclvefodxqldijhh.supabase.co'
-const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON || 'sb_publishable_8p2sGu1KevPySaNpFr2JLA_13OhwK3h'
-
 export default function Home() {
 
-  const supabase: SupabaseClient = createClient(
-      supabaseURL,
-      supabaseKey
-  );
-
-  
+   
   const [formData, setFormData] = useState<FormData>({
     first_name: '',
     last_name: '',
