@@ -2,7 +2,6 @@
 import NavBar from "../components/navbar";
 import Footer from "../components/footer";
 import Image from "next/image";
-import { createClient, SupabaseClient } from "@supabase/supabase-js";
 import { ChangeEvent, FormEvent, useState } from "react";
 import supabase from "../components/api/client"
 
@@ -14,13 +13,9 @@ interface ServiceData {
   message: string;
 }
 
-// const supabaseURL = process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://kqwtcclvefodxqldijhh.supabase.co';
-// const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON || 'sb_publishable_8p2sGu1KevPySaNpFr2JLA_13OhwK3h';
-
 
 export default function Home() {
 
-  // const supabase: SupabaseClient = createClient(supabaseURL, supabaseKey);
 
  
   
