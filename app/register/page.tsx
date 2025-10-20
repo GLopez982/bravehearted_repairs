@@ -1,6 +1,5 @@
 'use client'
 import { ChangeEvent, FormEvent, useState } from "react";
-import { createClient, SupabaseClient } from "@supabase/supabase-js";
 import Image from "next/image";
 import NavBar from "../components/navbar";
 import Footer from "../components/footer";
@@ -87,9 +86,10 @@ export default function Home() {
 
 
           <div className="mt-5 flex w-auto h-auto lg:w-[417px] lg:h-[679px] border-2 border-[#EF5B1750] shadow-lg shadow-[#000000] hover:shadow-[#EF5B1765] rounded-lg bg-[#EF5B1725] ">
-            
             <form onSubmit={handleSubmit} className="flex flex-col items-center">
-              <h1 className="text-[20px] font-bold bg-linear-to-r from-[#EF5B17] to-[#000000] bg-clip-text text-transparent p-10">Register Now!</h1>
+              <h1 className="text-[20px] font-bold bg-linear-to-r from-[#EF5B17] to-[#000000] bg-clip-text text-transparent p-10">Subscribe Now!</h1>
+              <p className="text-[15px] p-2 text-black">Subscribe to our daily news letter for discounts, new tech information and troubleshooting tips!</p>
+
               <div className="p-10">
               <label  className="flex flex-col flex-1 text-black gap-2">
               First Name:
@@ -147,7 +147,7 @@ export default function Home() {
               />
             </label>
             </div>
-            <button type='submit' className="flex flex-col border-2 border-black text-white rounded-[5px] shadow-lg shadow-white mb-10 lg:mb-0 ml-1 lg:ml-0 bg-linear-to-r from-[#EF5B17] to-[#000000] w-auto h-auto lg:w-[300px]">Register</button>
+            <button type='submit' className="flex flex-col border-2 border-black text-white rounded-[5px] shadow-lg shadow-white mb-10 lg:mb-0 ml-1 lg:ml-0 bg-linear-to-r from-[#EF5B17] to-[#000000] w-auto h-auto lg:w-[300px]">Subscribe</button>
             </form>
           </div>
         </div>
