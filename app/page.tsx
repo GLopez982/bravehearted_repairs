@@ -7,11 +7,11 @@ export default function Home() {
     /* */
     <div className="bg-[#CBC9C6] font-sans min-h-screen overflow-x-hidden">
       <NavBar/>
-      <div className="w-full h-auto lg:h-[375px] bg-linear-to-r from-red-100 to-blue-500">
+      <div className="w-full h-auto lg:h-[375px] bg-linear-to-r from-red-100 to-blue-500 flex items-center justify-center">
 
               <Image
-              className="w-full h-full object-cover relative"
-              src="/techHeartLogo.png"
+              className="w-full h-full sm:object-contain lg:object-fill [image-rendering:high-quality] [image-rendering:-moz-crisp-edges]"
+              src="/braveLogo.png"
               alt="Missing pic"
               width={250}
               height={250}

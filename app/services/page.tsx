@@ -81,8 +81,8 @@ export default function Home() {
          <div className="w-full h-auto lg:h-[375px] bg-linear-to-r from-red-100 to-blue-500">
    
                  <Image
-                 className="w-full h-full object-cover "
-                 src="/techLogoGL.png"
+                 className="w-full h-full sm:object-contain lg:object-fill [image-rendering:high-quality] [image-rendering:-moz-crisp-edges]"
+                 src="/techLogoBR.png"
                  alt="Missing pic"
                  width={250}
                  height={250}

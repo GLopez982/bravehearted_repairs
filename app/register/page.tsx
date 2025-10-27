@@ -153,8 +153,9 @@ export default function Home() {
         </div>
 
        </main>
-      
+      <div className="flex mt-59 w-full h-auto">
       <Footer/>
+      </div>
     </div>
   );
 }
