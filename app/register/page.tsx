@@ -9,9 +9,8 @@ import supabase from "../components/api/client";
 interface FormData {
     first_name: string;
     last_name: string;
-    username: string;
     email: string;
-    password: string;
+  
 }
 
 export default function Home() {
@@ -20,14 +19,13 @@ export default function Home() {
   const [formData, setFormData] = useState<FormData>({
     first_name: '',
     last_name: '',
-    username: '',
-    email: '',
-    password: ''
+    email: ''
+   
   });
 
   async function storeFormData(formData: FormData): Promise<boolean>  {
     const {data, error} = await supabase
-    .from('users')
+    .from('subscribers')
     .insert([formData])
 
     if(error){
@@ -58,9 +56,8 @@ export default function Home() {
       setFormData({
         first_name: '',
         last_name: '',
-        username: '',
-        email: '',
-        password: ''
+        email: ''
+      
       });
     }else{
       alert("Form failed to submit!");
@@ -114,34 +111,12 @@ export default function Home() {
               />
             </label>
             <label  className="flex flex-col flex-1 text-black gap-2">
-              UserName:
-              <input
-                className="border-2 border-black text-black w-full md:w-[308px] md:h-[25px] bg-[#FFFFFF80]"
-                type="text"
-                name="username"
-                value={formData.username}
-                onChange={handleInputChange}
-                required
-              />
-            </label>
-            <label  className="flex flex-col flex-1 text-black gap-2">
               Email:
               <input
                 className="border-2 border-black text-black w-full md:w-[308px] md:h-[25px] bg-[#FFFFFF80]"
                 type="text"
                 name="email"
                 value={formData.email}
-                onChange={handleInputChange}
-                required
-              />
-            </label>
-            <label  className="flex flex-col flex-1 text-black gap-2">
-              Password:
-              <input
-                className="border-2 border-black text-black w-full md:w-[308px] md:h-[25px] bg-[#FFFFFF80]"
-                type="text"
-                name="password"
-                value={formData.password}
                 onChange={handleInputChange}
                 required
               />
