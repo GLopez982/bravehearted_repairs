@@ -11,7 +11,7 @@ export default function Home() {
 
               <Image
               className="w-full h-full sm:object-contain lg:object-fill [image-rendering:high-quality] [image-rendering:-moz-crisp-edges]"
-              src="/braveLogo.png"
+              src="/braveLogo1.png"
               alt="Missing pic"
               width={250}
               height={250}

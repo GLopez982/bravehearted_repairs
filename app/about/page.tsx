@@ -86,27 +86,27 @@ export default function Home() {
             </h1>
             <p className="p-10 ml-5 mr-5">
               <br />
-              Hello, my name is Gerry. I specialize in the repair and
+              Hello, Welcome to BraveHeart Repairs. We specialize in the repair and
               maintenance of desktop computers, laptops, and mobile devices,
               backed by a strong foundation in Information Technology and
               Software Development. <br />
               <br />
               With a detail-oriented approach and a commitment to reliable
-              service, I aim to help clients resolve hardware and software
+              service, We aim to help clients resolve hardware and software
               issues efficiently and effectively.
               <br />
               <br />
               Whether your&apos;e experiencing system crashes, slow performance,
               connectivity problems, or need help with upgrades and data
-              recovery, I offer personalized solutions designed to get your
+              recovery, We offer personalized solutions designed to get your
               devices back in top shape.
               <br />
-              <br /> My goal is to provide clear communication, honest
-              diagnostics, and dependable results—so you can stay productive and
+              <br /> Our goal is to provide clear communication, honest
+              diagnostics, and dependable results, so you can stay productive and
               connected.
               <br />
               <br />
-              Your tech is essential. I&apos;m here to keep it working smoothly.
+              Your tech is essential and we are here to keep it working smoothly.
               <br />
             </p>
           </div>
@@ -114,8 +114,8 @@ export default function Home() {
           <div className="mt-5 flex w-full h-auto lg:w-[517px] lg:h-[663px] border-2 border-[#EF5B1750] shadow-lg shadow-[#000000] rounded-lg bg-black">
             <Image
               className=""
-              src="/Me.jpg"
-              alt="Next.js logo"
+              src="/techs.png"
+              alt="Image of two technicians working on a computer"
               width={517}
               height={663}
               priority
