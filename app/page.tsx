@@ -37,7 +37,7 @@ export default function Home() {
               height={250}
               priority
               />
-              <div className="p-4 text-center text-black text-[25px] ">
+              <div className="p-4 text-center text-black text-[23px] ">
                 <figcaption className=" mt-5 mb-5">Braveheart Repairs also offers custom PC Builds</figcaption> 
               </div>
               
@@ -54,7 +54,7 @@ export default function Home() {
               height={250}
               priority
               />
-               <div className="p-4 text-center text-black text-[25px]">
+               <div className="p-4 text-center text-black text-[23px]">
                 <figcaption className="mt-5 mb-5">We have certified repair technicians on site for any laptop</figcaption> 
               </div>
               
@@ -69,8 +69,8 @@ export default function Home() {
               height={250}
               priority
               /> 
-              <div className="p-4 text-center text-black text-[25px]">
-                <figcaption className="mt-5 mb-5">We service all mobile and tablet devices</figcaption> 
+              <div className="p-4 text-center text-black text-[23px]">
+                <figcaption className="mt-6 mb-">We service all mobile and tablet devices</figcaption> 
               </div>
 
           </div>
