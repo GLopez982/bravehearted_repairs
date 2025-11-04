@@ -14,62 +14,62 @@ import Footer from "../components/footer";
 
 export default function Home() {
 
-//   //form data variable to store form input in formData and function setFormData used for updating values
-//   const [formData, setFormData] = useState<FormData>({
-//     firstName: '',
-//     lastName: '',
-//     email: '',
-//     message: ''
-//   });
+  //form data variable to store form input in formData and function setFormData used for updating values
+  // const [formData, setFormData] = useState<FormData>({
+  //   firstName: '',
+  //   lastName: '',
+  //   email: '',
+  //   message: ''
+  // });
 
 
-//   //isSubmitting variable used to track if form is being submitted. startes in false value, setIsSubmitting used to update value.
-//   const [isSubmitting, setIsSubmitting] =  useState<boolean>(false);
+  // //isSubmitting variable used to track if form is being submitted. startes in false value, setIsSubmitting used to update value.
+  // const [isSubmitting, setIsSubmitting] =  useState<boolean>(false);
 
-//   //submitMessage used to hold error message or success message of form submittion, function setSubmitMessage used to update value.
-//   const [submitMessage, setSubmitMessage] = useState<string>('');
+  // //submitMessage used to hold error message or success message of form submittion, function setSubmitMessage used to update value.
+  // const [submitMessage, setSubmitMessage] = useState<string>('');
 
-//   //
-//   const handleInputChange = (e: React.ChangeEvent <HTMLInputElement | HTMLTextAreaElement>) =>  {
-//     const {name, value} = e.target;
-//     setFormData(prev => ({
-//       ...prev,
-//       [name]: value
-//     }));
-//   };
+  // //
+  // const handleInputChange = (e: React.ChangeEvent <HTMLInputElement | HTMLTextAreaElement>) =>  {
+  //   const {name, value} = e.target;
+  //   setFormData(prev => ({
+  //     ...prev,
+  //     [name]: value
+  //   }));
+  // };
 
-//   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) =>{
-//     e.preventDefault();
-//     setIsSubmitting(true);
-//     setSubmitMessage('');
+  // const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) =>{
+  //   e.preventDefault();
+  //   setIsSubmitting(true);
+  //   setSubmitMessage('');
   
-//     try{
-//       const response = await fetch('/api/contact', {
-//         method: 'POST',
-//         headers: {
-//           'Content-Type': 'application/json',
-//         },
-//         body: JSON.stringify(formData), 
-//       });
+  //   try{
+  //     const response = await fetch('/api/contact', {
+  //       method: 'POST',
+  //       headers: {
+  //         'Content-Type': 'application/json',
+  //       },
+  //       body: JSON.stringify(formData), 
+  //     });
 
-//       if(response.ok){
-//         setSubmitMessage('Message sent successfully!')
-//         setFormData({
-//           firstName: '',
-//           lastName: '',
-//           email: '',
-//           message: ''
-//         });
-//       }else{
-//         setSubmitMessage("Message failed, please try again in a few seconds");
-//       }
-//     }catch(error: unknown){
-//       console.log(error);
-//       setSubmitMessage('Error Sending Message. Please try again');
-//     }finally{
-//       setIsSubmitting(false)
-//     }  
-//   };
+  //     if(response.ok){
+  //       setSubmitMessage('Message sent successfully!')
+  //       setFormData({
+  //         firstName: '',
+  //         lastName: '',
+  //         email: '',
+  //         message: ''
+  //       });
+  //     }else{
+  //       setSubmitMessage("Message failed, please try again in a few seconds");
+  //     }
+  //   }catch(error: unknown){
+  //     console.log(error);
+  //     setSubmitMessage('Error Sending Message. Please try again');
+  //   }finally{
+  //     setIsSubmitting(false)
+  //   }  
+  // };
 
 
   return (
@@ -84,7 +84,7 @@ export default function Home() {
             <h1 className="ml-20 lg:ml-50 text-[40px] py-4 py-5 lg:px-10 lg:py-10 font-bold">
               About Us
             </h1>
-            <p className="p-10 ml-5 mr-5">
+            <p className="p-5 ml-5 mr-5">
               <br />
               Hello, Welcome to BraveHeart Repairs. We specialize in the repair and
               maintenance of desktop computers, laptops, and mobile devices,
@@ -108,6 +108,8 @@ export default function Home() {
               <br />
               Your tech is essential and we are here to keep it working smoothly.
               <br />
+              <br/>
+              For questions and comments email us at: <a style={{color: 'blue'}} href="mailto:braveheart-repairs@gmail.com">Braveheart-repairs@gmail.com</a>
             </p>
           </div>
 
@@ -123,7 +125,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="p-10 flex items-center text-black ">
+        {/* <div className="p-10 flex items-center text-black ">
           <h2 className="text-center mx-auto text-[25px] mt-10 font-bold"> Contact me</h2>
         </div>
 
@@ -137,8 +139,8 @@ export default function Home() {
                   className="border-2 border-black bg-white text-black w-full md:w-[300px] h-[40px] "
                   type="text"
                   name="firstName"
-                  // value={formData.firstName}
-                  // onChange={handleInputChange}
+                  value={formData.firstName}
+                  onChange={handleInputChange}
                   required
                 />
               </label>
@@ -149,8 +151,8 @@ export default function Home() {
                   className="border-2 border-black bg-white text-black w-full md:w-[282px] sm:w-[100px] h-[40px]"
                   type="text"
                   name="lastName"
-                  // value={formData.lastName}
-                  // onChange={handleInputChange}
+                  value={formData.lastName}
+                  onChange={handleInputChange}
                   required
                 />
               </label>
@@ -162,8 +164,8 @@ export default function Home() {
                 className="border-2 border-black bg-white text-black w-full md:w-[651px] h-[50px]"
                 type="text"
                 name="email"
-                // value={formData.email}
-                // onChange={handleInputChange}
+                value={formData.email}
+                onChange={handleInputChange}
                 required
               />
             </label>
@@ -173,22 +175,22 @@ export default function Home() {
               <textarea
                 className="resize-none border-2 border-black bg-white text-black w-full md:w-[651px] h-[193px]"
                 name="message"
-                // value={formData.message}
-                // onChange={handleInputChange}
+                value={formData.message}
+                onChange={handleInputChange}
                 required
               />
             </label >
             <div className="flex justify-center">
            <button 
             type="submit" 
-            // disabled={isSubmitting}
+            disabled={isSubmitting}
             className="text-white border-2 border-black bg-white cursor-pointer px-6 py-2 hover:bg-[#E77014] transition-colors bg-linear-to-r from-[#EF5B17] to-[#000000]">Submit
-            {/* {isSubmitting ? 'Sending....' : 'Submit'} */}
+            {isSubmitting ? 'Sending....' : 'Submit'}
             </button>
          </div>
           </form>
          
-        </div>
+        </div> */}
       </main>
       <Footer/>
     </div>
