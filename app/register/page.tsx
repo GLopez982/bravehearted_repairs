@@ -70,7 +70,7 @@ export default function Home() {
       <NavBar />
 
       <main className="flex-grow container mx-auto px-4 px-8 ">
-        <div className="p-5 grid grid-cols-1 lg:grid-cols-3 gap-4">
+        <div className="p-10 grid grid-cols-1 lg:grid-cols-3 gap-4">
           <div className="flex justify-center border-2 shadow-[5px_5px_5px_#121212] bg-[#EF5B1725]  items-center text-black lg:col-span-2 w-full lg:w-[624px] h-auto lg:h-[613px] rounded-lg">
               <Image
               src="/circuit-heart.png"
@@ -82,7 +82,7 @@ export default function Home() {
           </div>
 
 
-          <div className="mt-5 flex w-auto h-auto lg:w-[417px] lg:h-[679px] border-2 border-[#EF5B1750] shadow-lg shadow-[#000000] hover:shadow-[#EF5B1765] rounded-lg bg-[#EF5B1725] ">
+          <div className="mt-5 lg:col-start-1 lg:row-start-2 flex w-auto h-auto lg:w-[417px] lg:h-[679px] border-2 border-[#EF5B1750] shadow-lg shadow-[#000000] hover:shadow-[#EF5B1765] rounded-lg bg-[#EF5B1725] ">
             <form onSubmit={handleSubmit} className="flex flex-col items-center">
               <h1 className="text-[20px] font-bold bg-linear-to-r from-[#EF5B17] to-[#000000] bg-clip-text text-transparent p-10">Subscribe Now!</h1>
               <p className="text-[15px] p-2 text-black">Subscribe to our daily news letter for discounts, new tech information and troubleshooting tips!</p>
