@@ -128,9 +128,9 @@ export default function Home() {
         </div>
 
        </main>
-    
+      <div className="flex mt-auto w-full h-auto">
       <Footer/>
-     
+      </div>
     </div>
   );
 }
