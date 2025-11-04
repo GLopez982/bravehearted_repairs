@@ -71,7 +71,7 @@ export default function Home() {
 
       <main className="flex-grow container mx-auto px-4 px-8 ">
         <div className="p-5 grid grid-cols-1 lg:grid-cols-3 gap-4">
-          <div className="flex justify-center border-2 shadow-[5px_5px_5px_#121212] bg-[#EF5B1725] col-span-2 col-start-1 items-center text-black w-full lg:w-[624px] h-auto lg:h-[613px] rounded-lg">
+          <div className="flex justify-center border-2 shadow-[5px_5px_5px_#121212] bg-[#EF5B1725]  items-center text-black lg:col-span-2 w-full lg:w-[624px] h-auto lg:h-[613px] rounded-lg">
               <Image
               src="/circuit-heart.png"
               alt="Next.js logo"
@@ -128,7 +128,7 @@ export default function Home() {
         </div>
 
        </main>
-      <div className="flex mt-62 w-full h-auto">
+      <div className="flex mt- w-full h-auto">
       <Footer/>
       </div>
     </div>
