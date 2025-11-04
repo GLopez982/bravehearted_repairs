@@ -82,7 +82,7 @@ export default function Home() {
         <div className="p-5 grid grid-cols-1 lg:grid-cols-3 gap-4">
           <div className="border-2 shadow-[5px_5px_5px_#121212] bg-[#EF5B1725] col-span-2 col-start-1 items-center text-black w-full lg:w-[624px] h-auto lg:h-[691px] rounded-lg">
             <h1 className="ml-20 lg:ml-50 text-[40px] py-4 py-5 lg:px-10 lg:py-10 font-bold">
-              About Me
+              About Us
             </h1>
             <p className="p-10 ml-5 mr-5">
               <br />
