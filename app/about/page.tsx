@@ -79,7 +79,7 @@ export default function Home() {
       <NavBar />
     
       <main className="container mx-auto px-4 px-8 ">
-        <div className="p-5 grid grid-cols-1 lg:grid-cols-3 gap-4">
+        <div className="p-5 xl:mr-25 grid grid-cols-1 lg:grid-cols-3 gap-4">
           <div className="border-2 shadow-[5px_5px_5px_#121212] bg-[#EF5B1725] col-span-2 col-start-1 items-center text-black w-full lg:w-[624px] h-auto lg:h-[691px] rounded-lg">
             <h1 className="ml-20 lg:ml-50 text-[40px] py-4 py-5 lg:px-10 lg:py-10 font-bold">
               About Us
@@ -113,7 +113,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="mt-5 flex w-full h-auto lg:w-[517px] lg:h-[663px] border-2 border-[#EF5B1750] shadow-lg shadow-[#000000] rounded-lg bg-black">
+          <div className="mt-5 flex w-full h-auto lg:w-[517px] lg:h-[663px] border-2 border-[#EF5B1750] shadow-lg shadow-[#000000] rounded-lg bg-black mr-">
             <Image
               className=""
               src="/techs.png"

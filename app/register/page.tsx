@@ -23,18 +23,18 @@ export default function Home() {
    
   });
 
-  async function storeFormData(formData: FormData): Promise<boolean>  {
+  async function storeFormData(formData: FormData): Promise<{success:boolean, message: string}>  {
     const {data, error} = await supabase
     .from('subscribers')
     .insert([formData])
 
     if(error){
       console.error('Error submitting the form:', error.message);
-      return false;
+      return {success: false, message: error.message};
     }
 
     console.log('Data inserted successfully: ', data);
-    return true;
+    return {success: true, message: "Form submitted successfully"};
   }
 
   const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -49,9 +49,10 @@ export default function Home() {
     e.preventDefault();
     console.log('Form Submitted: ', formData);
 
-    const success = await storeFormData(formData);
 
-    if(success){
+    const results = await storeFormData(formData);
+
+    if(results.success){
       alert("Form submitted successfully");
       setFormData({
         first_name: '',
@@ -60,7 +61,7 @@ export default function Home() {
       
       });
     }else{
-      alert("Form failed to submit!");
+      alert(`Form failed to submit: ${results.message}`);
     }
   }
 
