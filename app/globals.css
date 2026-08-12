@@ -24,3 +24,63 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* ── Circuit-wire hover + click animation for nav links ── */
+@keyframes circuit-trace {
+  from { clip-path: inset(0 100% 0 0); }
+  to   { clip-path: inset(0 0% 0 0); }
+}
+
+@keyframes circuit-flash {
+  0%   { filter: drop-shadow(0 0 12px #ffffff) drop-shadow(0 0 6px #ffe8a0); }
+  100% { filter: drop-shadow(0 0 3px #ffffff); opacity: 0.5; }
+}
+
+.circuit-link {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  transition: color 0.15s ease, transform 0.1s ease;
+}
+
+.circuit-link::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(255,230,160,0.5), #ffffff, #ffe8a0, #ffffff, rgba(255,230,160,0.5));
+  border-radius: 1px;
+  filter: drop-shadow(0 0 5px #ffffff) drop-shadow(0 0 3px #1a0800);
+  clip-path: inset(0 100% 0 0);
+}
+
+.circuit-link:hover::after,
+.circuit-link:focus-visible::after {
+  animation: circuit-trace 0.35s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.circuit-link:active {
+  transform: scale(0.93);
+  filter: drop-shadow(0 0 6px #E77014);
+}
+
+.circuit-link:active::after {
+  clip-path: inset(0 0% 0 0);
+  animation: circuit-flash 0.18s ease-out forwards;
+}
+
+/* ── 3D service card headings ── */
+.service-heading {
+  color: #ffffff;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-shadow:
+    1px 1px 0 #8b3a00,
+    2px 2px 0 #6b2c00,
+    3px 3px 0 #4b1e00,
+    4px 4px 0 #2b1000,
+    5px 5px 10px rgba(0, 0, 0, 0.65),
+    0 0 28px rgba(255, 180, 80, 0.18);
+}

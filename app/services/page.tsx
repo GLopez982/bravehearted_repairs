@@ -69,9 +69,11 @@ export default function Home() {
   return (
     <div className="bg-[#CBC9C6] font-sans min-h-screen overflow-x-hidden">
       <NavBar />
-      <div className="w-full h-auto lg:h-[375px] bg-linear-to-r from-red-100 to-blue-500">
+
+      {/* Hero Banner */}
+      <div className="w-full h-[250px] lg:h-[375px] bg-linear-to-br from-[#1a0800] via-[#0f0400] to-black flex items-center justify-center overflow-hidden">
         <Image
-          className="w-full h-full sm:object-contain lg:object-fill "
+          className="w-full h-full sm:object-contain lg:object-fill [image-rendering:high-quality]"
           src="/techLogoBR.png"
           alt="Service logo of a heart with company name"
           width={500}
@@ -80,66 +82,80 @@ export default function Home() {
         />
       </div>
 
+      {/* Service Cards */}
       <main className="container mx-auto px-4 py-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full h-auto lg:h-[900px] ">
-          <div className="border-2 shadow-[5px_5px_5px_#121212] bg-[#E77014] rounded-lg p-4 flex flex-col items-center justify-center min-h-[200px]">
-            <h1 className="mb-16 text-shadow-lg text-shadow-[#000000] text-[25px]">
-              Desktop Services
-            </h1>
-            <Image
-              src="/desktop-services.png"
-              alt="Missing pic"
-              width={450}
-              height={250}
-              priority
-            />
-          </div>
-
-          <div className="border-2 shadow-[5px_5px_5px_#121212] bg-[#E77014] rounded-lg p-4 flex flex-col items-center justify-center min-h-[200px]">
-            <h1 className="mb-16 text-shadow-lg text-shadow-[#000000] text-[25px]">
-              Laptop Services
-            </h1>
-            <Image
-              src="/laptop-services.png"
-              alt="Missing pic"
-              width={450}
-              height={250}
-              priority
-            />
-          </div>
-          <div className="border-2 shadow-[5px_5px_5px_#121212] bg-[#E77014] rounded-lg p-4 flex flex-col items-center justify-center min-h-[200px]">
-            <h1 className="mb-16 text-shadow-lg text-shadow-[#000000] text-[25px]">
-              Mobile/Tablet Services
-            </h1>
-            <Image
-              className="lg:w-[420]"
-              src="/mobile-services.png"
-              alt="Missing pic"
-              width={450}
-              height={250}
-              priority
-            />
-          </div>
-        </div>
-      </main>
-      <div className="bg-transparent w-full py-10 px-4">
-        <div className="p-10 flex justify-center text-black ">
-          <h2 className="text-center mx-auto text-[20px] text-shadow-lg text-shadow-white font-bold">
-            {" "}
-            Service Order Form{" "}
+        <div className="mb-8 text-center">
+          <h2 className="text-[22px] lg:text-[28px] font-bold bg-linear-to-r from-[#EF5B17] to-[#000000] bg-clip-text text-transparent leading-tight">
+            What We Fix
           </h2>
         </div>
 
-        <div className="shadow-[5px_5px_5px_#121212] hover:shadow-black border-2 border-[#EF5B1775] gap-4 w-full lg:w-[757px] h-auto lg:h-[562px] bg-[#EF5B1725] flex justify-center items-center mx-auto mb-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+          <div className="border-2 shadow-[5px_5px_8px_#121212] hover:shadow-[5px_5px_20px_#E77014] bg-[#E77014] rounded-lg p-6 flex flex-col items-center gap-6 transition-all duration-300 hover:-translate-y-1">
+            <h2 className="service-heading text-[26px] lg:text-[30px] text-center">
+              Desktop Services
+            </h2>
+            <Image
+              src="/desktop-services.png"
+              alt="Desktop repair services"
+              width={450}
+              height={250}
+              className="w-full h-auto"
+              priority
+            />
+          </div>
+
+          <div className="border-2 shadow-[5px_5px_8px_#121212] hover:shadow-[5px_5px_20px_#E77014] bg-[#E77014] rounded-lg p-6 flex flex-col items-center gap-6 transition-all duration-300 hover:-translate-y-1">
+            <h2 className="service-heading text-[26px] lg:text-[30px] text-center">
+              Laptop Services
+            </h2>
+            <Image
+              src="/laptop-services.png"
+              alt="Laptop repair services"
+              width={450}
+              height={250}
+              className="w-full h-auto"
+              priority
+            />
+          </div>
+
+          <div className="border-2 shadow-[5px_5px_8px_#121212] hover:shadow-[5px_5px_20px_#E77014] bg-[#E77014] rounded-lg p-6 flex flex-col items-center gap-6 transition-all duration-300 hover:-translate-y-1">
+            <h2 className="service-heading text-[26px] lg:text-[30px] text-center">
+              Mobile / Tablet Services
+            </h2>
+            <Image
+              src="/mobile-services.png"
+              alt="Mobile and tablet repair services"
+              width={450}
+              height={250}
+              className="w-full h-auto"
+              priority
+            />
+          </div>
+
+        </div>
+      </main>
+
+      {/* Service Order Form */}
+      <section className="container mx-auto px-4 pb-12">
+        <div className="mb-8 text-center">
+          <h2 className="text-[22px] lg:text-[26px] font-bold text-black">
+            Service Order Form
+          </h2>
+        </div>
+
+        <div className="shadow-[5px_5px_8px_#121212] hover:shadow-[5px_5px_16px_#1a0800] border-2 border-[#EF5B1775] bg-[#EF5B1725] w-full max-w-[757px] mx-auto rounded-lg p-6 mb-10 transition-shadow duration-300">
           <form
             onSubmit={handleSubmit}
-            className="w-full text-black flex flex-col gap-4 p-4"
+            className="w-full text-black flex flex-col gap-5"
           >
-            <div className="flex flex-col md:flex-row gap-4 ">
-              <label htmlFor="first_name" className="flex flex-col flex-1">
-                First Name:
+            <div className="flex flex-col md:flex-row gap-4">
+              <label htmlFor="first_name" className="flex flex-col flex-1 gap-1 font-medium">
+                First Name
                 <input
-                  className="border-2 border-black bg-white text-black w-full  md:w-[344.48px] h-[56px]"
+                  id="first_name"
+                  className="border-2 border-black bg-white text-black w-full h-[52px] px-3 rounded focus:outline-none focus:border-[#E77014]"
                   type="text"
                   name="first_name"
                   value={serviceData.first_name}
@@ -148,10 +164,10 @@ export default function Home() {
                 />
               </label>
 
-              <label className="flex flex-col flex-1">
-                Last Name:
+              <label className="flex flex-col flex-1 gap-1 font-medium">
+                Last Name
                 <input
-                  className="border-2 border-black bg-white text-black w-full md:w-[344.48px] h-[56px]"
+                  className="border-2 border-black bg-white text-black w-full h-[52px] px-3 rounded focus:outline-none focus:border-[#E77014]"
                   type="text"
                   name="last_name"
                   value={serviceData.last_name}
@@ -161,11 +177,11 @@ export default function Home() {
               </label>
             </div>
 
-            <label className="flex flex-col flex-1">
-              Email:
+            <label className="flex flex-col gap-1 font-medium">
+              Email
               <input
-                className="border-2 border-black bg-white text-black w-full md:w-[731px] h-[63px]"
-                type="text"
+                className="border-2 border-black bg-white text-black w-full h-[52px] px-3 rounded focus:outline-none focus:border-[#E77014]"
+                type="email"
                 name="email"
                 value={serviceData.email}
                 onChange={handleInputChange}
@@ -173,10 +189,10 @@ export default function Home() {
               />
             </label>
 
-            <label className="flex flex-col flex-1">
-              Service select
+            <label className="flex flex-col gap-1 font-medium">
+              Select a Service
               <select
-                className="resize-none border-2 border-black bg-white text-black w-full  md:w-[731px] h-[60px]"
+                className="border-2 border-black bg-white text-black w-full h-[52px] px-3 rounded focus:outline-none focus:border-[#E77014]"
                 name="service"
                 onChange={handleInputChange}
                 value={serviceData.service}
@@ -186,7 +202,7 @@ export default function Home() {
                   Select a service option
                 </option>
                 <option value="Hardware Diagnostic & Troubleshooting">
-                  Desktop: Hardware Diagnostic & Troubleshooting
+                  Desktop: Hardware Diagnostic &amp; Troubleshooting
                 </option>
                 <option value="Motherboard Repair/Replacement">
                   Desktop: Motherboard Repair/Replacement
@@ -206,17 +222,17 @@ export default function Home() {
                 <option value="CPU Cooling System Repair">
                   Desktop: CPU Cooling System Repair
                 </option>
-                <option value="Operating Systemn Installation/Repair">
-                  Desktop: Operating Systemn Installation/Repair
+                <option value="Operating System Installation/Repair">
+                  Desktop: Operating System Installation/Repair
                 </option>
                 <option value="Virus/Malware Removal & Security Setup">
-                  Desktop: Virus/Malware Removal & Security Setup
+                  Desktop: Virus/Malware Removal &amp; Security Setup
                 </option>
                 <option value="Data Recovery Services">
                   Desktop: Data Recovery Services
                 </option>
-                <option value="Custom PC Build Consulation">
-                  Desktop: Custom PC Build Consulation
+                <option value="Custom PC Build Consultation">
+                  Desktop: Custom PC Build Consultation
                 </option>
                 <option value="Screen/LCD Replacement">
                   Laptop: Screen/LCD Replacement
@@ -231,10 +247,10 @@ export default function Home() {
                   Laptop: Charging Port Repair
                 </option>
                 <option value="Trackpad/Touchpad Repair">
-                  Laptop: Trackpad/Touchpad Repair{" "}
+                  Laptop: Trackpad/Touchpad Repair
                 </option>
                 <option value="Fan Cleaning & Overheating Fix">
-                  Laptop: Fan Cleaning & Overheating Fix
+                  Laptop: Fan Cleaning &amp; Overheating Fix
                 </option>
                 <option value="RAM/Memory Upgrade">
                   Laptop: RAM/Memory Upgrade
@@ -249,18 +265,18 @@ export default function Home() {
                   Laptop: WiFi/Bluetooth Module Repair
                 </option>
                 <option value="Liquid Damage Assessment & Repair">
-                  Laptop: Liquid Damage Assessment & Repair
+                  Laptop: Liquid Damage Assessment &amp; Repair
                 </option>
                 <option value="Performance Optimization & Tune-up">
-                  Laptop: Performance Optimization & Tune-up
+                  Laptop: Performance Optimization &amp; Tune-up
                 </option>
                 <option value="Screen/Digitizer Replacement">
                   Mobile/Tablet: Screen/Digitizer Replacement
                 </option>
-                <option value="Battery Replacement">
+                <option value="Mobile Battery Replacement">
                   Mobile/Tablet: Battery Replacement
                 </option>
-                <option value="Charging Port Repair">
+                <option value="Mobile Charging Port Repair">
                   Mobile/Tablet: Charging Port Repair
                 </option>
                 <option value="Camera Repair/Replacement">
@@ -273,48 +289,49 @@ export default function Home() {
                   Mobile/Tablet: Home/Power Button Repair
                 </option>
                 <option value="Water Damage Assessment & Repair">
-                  Mobile/Tablet: Water Damage Assessment & Repair
+                  Mobile/Tablet: Water Damage Assessment &amp; Repair
                 </option>
-                <option value="Sofwater Issues & OS Restoration">
-                  Mobile/Tablet: Sofwater Issues & OS Restoration
+                <option value="Software Issues & OS Restoration">
+                  Mobile/Tablet: Software Issues &amp; OS Restoration
                 </option>
                 <option value="Data Recovery & Transfer">
-                  Mobile/Tablet: Data Recovery & Transfer{" "}
+                  Mobile/Tablet: Data Recovery &amp; Transfer
                 </option>
-                <option value="Tablet Screen Repalcement">
-                  Mobile/Tablet: Tablet Screen Repalcement
+                <option value="Tablet Screen Replacement">
+                  Mobile/Tablet: Tablet Screen Replacement
                 </option>
-                <option value="Virus/Malsware Removal">
-                  Mobile/Tablet: Virus/Malsware Removal
+                <option value="Virus/Malware Removal">
+                  Mobile/Tablet: Virus/Malware Removal
                 </option>
                 <option value="Device Setup & Configuration">
-                  Mobile/Tablet: Device Setup & Configuration
+                  Mobile/Tablet: Device Setup &amp; Configuration
                 </option>
               </select>
             </label>
 
-            <label className="flex flex-col flex-1">
+            <label className="flex flex-col gap-1 font-medium">
               Service Message
               <textarea
-                className="resize-none border-2 border-black bg-white text-black w-full md:w-[731px] h-[130px]"
+                className="resize-none border-2 border-black bg-white text-black w-full h-[130px] px-3 py-2 rounded focus:outline-none focus:border-[#E77014]"
                 name="message"
-                value={serviceData.message || ""}
+                value={serviceData.message}
                 onChange={handleInputChange}
                 required
               />
             </label>
-            <div className="flex justify-center">
+
+            <div className="flex justify-center pt-2">
               <button
                 type="submit"
-                className="text-white border-2 border-black bg-white cursor-pointer px-6 py-2 hover:bg-[#E77014] transition-colors bg-linear-to-r from-[#EF5B17] to-[#000000]"
+                className="text-white border-2 border-black cursor-pointer px-8 py-3 rounded font-semibold tracking-wide bg-linear-to-r from-[#EF5B17] to-[#000000] hover:from-[#E77014] hover:to-[#1a0800] transition-all duration-200 shadow-[3px_3px_6px_#121212] hover:shadow-[3px_3px_12px_#E77014] hover:-translate-y-0.5"
               >
                 Submit
               </button>
             </div>
           </form>
         </div>
-      </div>
-      <div className="p-10 w-full h-auto"></div>
+      </section>
+
       <Footer />
     </div>
   );
